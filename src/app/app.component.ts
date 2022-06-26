@@ -15,37 +15,27 @@ export class AppComponent {
   constructor(
     private router: Router
   ) {
-    // this.router.events.subscribe((event: Event) => {
-    //   if (event instanceof NavigationEnd) {
-    //     if (this.hideSidenavUrlList.includes(event.url)) {
-    //       this.signOut();
-    //     } else {
-    //       if (sessionStorage.getItem('token') == null && this.router.url !== '/jobs') {
-    //         this.signOut();
-    //       } else if (sessionStorage.getItem('token') == 'registration') {
-    //         this.sidenavOpened = false;
-    //       }
-    //     }
-    //   }
-    // })
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        if (this.hideSidenavUrlList.includes(event.url)) {
+          this.signOut();
+        } else {
+          if (sessionStorage.getItem('token') == null && this.router.url !== '/jobs') {
+            this.signOut();
+          } else if (sessionStorage.getItem('token') == 'registration') {
+            this.sidenavOpened = false;
+          }
+        }
+      }
+    })
   }
 
   ngOnInit(): void {
-    // this.coreService.signInObserver.subscribe(data => {
-    //   if (data) {
-    //     this.setLinks();
-    //   } else {
-    //     this.signOut();
-    //   }
-    // });
-
-    // if (sessionStorage.getItem('token') == null) {
-    //   this.signOut();
-    // } else if (sessionStorage.getItem('token') == 'registration') {
-    //   this.sidenavOpened = false;
-    // } else {
-    //   this.setLinks();
-    // }
+    if (sessionStorage.getItem('token') == null) {
+      this.signOut();
+    } else {
+      this.setLinks();
+    }
 
     this.setLinks();
   }
