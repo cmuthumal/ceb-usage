@@ -1,0 +1,29 @@
+$poppins: "Poppins", sans-serif;
+
+:root {
+    // define colors here
+    --primary           : #0061FF;
+    --ash               : #e3e3e3;
+    --white             : white;
+    --textOnPrimary     : white;
+    --ashBorder         : #D4D4D8;
+    --ashText           : #999FA9;
+    --lightBlueBg       : #F0F6FF;
+    --lightBlueHover    : #F0F6FF;
+    --headerBorder      : #F3F6FB;
+    --ashText1          : #626973;
+}
+
+// define color variables for elements here
+$white                  : var(--white);
+$sidemenu-bg            : var(--ash);
+$active-link-color      : var(--primary);
+$primary-btn-bg         : var(--primary);
+$primary-color         : var(--primary);
+$primary-btn-text       : var(--textOnPrimary);
+$ash-border             : var(--ashBorder);
+$ash-text               : var(--ashText);
+$ash-text-1             : var(--ashText1);
+$light-blue-bg          : var(--lightBlueBg);
+$light-blue-hover       : var(--lightBlueHover);
+$header-border          : var(--headerBorder);
