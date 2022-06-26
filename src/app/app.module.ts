@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { CoreModule } from './modules/core/core.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
@@ -22,6 +23,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     CoreModule,
     DashboardModule,
     SettingsModule,

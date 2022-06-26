@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Event, NavigationEnd, Router } from '@angular/router';
+import { CoreService } from './modules/core/services/core.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ export class AppComponent {
   hideSidenavUrlList = ['/login'];
 
   constructor(
-    private router: Router
+    private router: Router,
+    private coreService: CoreService
   ) {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
@@ -31,6 +33,14 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
+    this.coreService.signInObserver.subscribe(data => {
+      if (data) {
+        this.setLinks();
+      } else {
+        // this.signOut();
+      }
+    });
+
     if (sessionStorage.getItem('token') == null) {
       this.signOut();
     } else {

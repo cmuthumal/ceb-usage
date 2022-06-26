@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CoreService } from '../../services/core.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private coreService: CoreService
   ) {
     this.form = this.fb.group({
       username: ['sisira', Validators.required],
@@ -40,9 +42,6 @@ export class LoginComponent implements OnInit {
           username: this.getFormValue('username').value,
           password: this.getFormValue('password').value
         };
-
-        console.log(data);
-        
 
         if (data.username == 'sisira' && data.password == 'sisira1') {
           this.authDataLoaded = true;
@@ -87,5 +86,6 @@ export class LoginComponent implements OnInit {
   signin(user: any) {
     sessionStorage.setItem('user', JSON.stringify(user));
     sessionStorage.setItem('token', '3ghw7-tr7935-dsvb3-er03f-pklm2');
+    this.coreService.signInBehavior.next(true);
   }
 }
