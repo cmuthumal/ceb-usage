@@ -1,0 +1,26 @@
+@import "../../../../../assets/scss/variables";
+
+.header-container {
+    position: relative;
+    border-bottom: 1px solid $header-border;
+    height: 60px;
+
+    .title-container {
+        width: 100%;
+        margin: 0;
+        position: absolute;
+        padding: 0 15px;
+
+        .logo-col {
+            span {
+                h1 {
+                    line-height: 60px !important;
+                    margin-left: 10px;
+                    display: inline;
+                    line-height: 40px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}

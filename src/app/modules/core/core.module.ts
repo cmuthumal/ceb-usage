@@ -10,6 +10,10 @@ import { LoginComponent } from './components/login/login.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    HeaderComponent,
+    LoginComponent
   ]
 })
 export class CoreModule { }

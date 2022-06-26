@@ -8,6 +8,9 @@ import { StatsComponent } from './components/stats/stats.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    StatsComponent
   ]
 })
 export class StatsModule { }

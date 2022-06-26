@@ -1,0 +1,47 @@
+@import "../assets/scss/_variables.scss";
+
+.sidemenu-container {
+    width: 100%;
+    height: calc(100% - 60px);
+}
+
+.sidemenu-content {
+    height: 100%;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.sidemenu-sidenav {
+    width: 15rem;
+    border: none;
+}
+
+.mat-drawer-inner-container {
+    position: relative;
+}
+
+.bottom-list {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+}
+
+.mat-list-item {
+    color: $ash-text;
+    padding: 0 16px !important;
+
+    mat-icon {
+        margin-right: 10px;
+    }
+}
+
+.mat-list-item:hover {
+    background-color: $light-blue-hover;
+}
+
+.mat-nav-list {
+    padding: 0;
+
+    .mat-list-item {
+        padding: 0 !important;
+    }
+}

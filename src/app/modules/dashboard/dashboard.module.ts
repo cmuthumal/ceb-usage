@@ -10,6 +10,10 @@ import { AddRecordComponent } from './components/add-record/add-record.component
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    DashboardComponent,
+    AddRecordComponent
   ]
 })
 export class DashboardModule { }

@@ -8,6 +8,9 @@ import { SettingsComponent } from './components/settings/settings.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    SettingsComponent
   ]
 })
 export class SettingsModule { }
