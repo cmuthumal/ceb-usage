@@ -80,6 +80,10 @@ div {
     max-width: unset !important;
 }
 
+.max-width-100 {
+    max-width: 100% !important;
+}
+
 .primary-btn {
     color: $primary-btn-text !important;
     background-color: $primary-btn-bg !important;

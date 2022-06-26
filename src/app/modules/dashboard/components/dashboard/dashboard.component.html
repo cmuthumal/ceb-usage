@@ -1,1 +1,16 @@
-<p>dashboard works!</p>
+<div class="container margin-0 max-width-100">
+    <div class="row title-row">
+        <div *ngIf="!dashboardDataLoaded" class="col-12">
+            <div>
+                <div class="spinner-container">
+                    <mat-progress-spinner class="loading-spinner" [mode]="'indeterminate'" [diameter]="50">
+                    </mat-progress-spinner>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="dashboardDataLoaded" class="col-12">
+            <h1 class="mb-0">Usage Details</h1>
+        </div>
+    </div>
+</div>
