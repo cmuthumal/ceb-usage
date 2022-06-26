@@ -1,0 +1,55 @@
+@import "../../../../../assets/scss/variables";
+
+mat-card {
+    width: 50rem;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 8rem;
+
+    mat-error {
+        margin: 10px 0;
+    }
+
+    mat-form-field {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .form-container {
+        width: 20rem;
+        border: 1px solid $ash-border;
+        border-radius: 4px;
+        padding: 2rem;
+
+        .forgot-pwd-text {
+            line-height: 36px;
+            font-weight: bold;
+            color: $active-link-color;
+            cursor: pointer;
+        }
+    }
+
+    .reset-container {
+        margin-top: 5rem;
+
+        .sign-up-txt {
+            font-weight: bold;
+            color: $active-link-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.spinner-area {
+    cursor: not-allowed;
+}
+
+.loading-spinner {
+    margin: 0 auto;
+}
+
+.primary-btn,
+.cancel-btn {
+    width: 85px;
+    height: 38px;
+}

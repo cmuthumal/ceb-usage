@@ -1,1 +1,37 @@
-<p>login works!</p>
+<mat-card>
+    <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="container form-container">
+                <div class="row">
+                    <mat-form-field class="full-width-input">
+                        <input matInput placeholder="Username" formControlName="username" required>
+                        <mat-error>
+                            Please provide a valid username
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field class="full-width-input">
+                        <input matInput type="password" placeholder="Password" formControlName="password" required>
+                        <mat-error>
+                            Please provide a valid password
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <mat-error *ngIf="loginInvalid" class="ml-m15">
+                    The username and password were not recognised
+                </mat-error>
+                <div class="row">
+                    <div class="col-12 padding-0">
+                        <button mat-raised-button type="submit" class="primary-btn">
+                            <span *ngIf="authDataLoaded">Sign In</span>
+                            <mat-progress-spinner *ngIf="!authDataLoaded" class="loading-spinner white-spinner"
+                                [mode]="'indeterminate'" [diameter]="30">
+                            </mat-progress-spinner>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
